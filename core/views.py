@@ -8,5 +8,3 @@ def homepage(request):
     context = RequestContext(request)   
     return render_to_response('homepage.html', context)
 
-
-

@@ -1,0 +1,12 @@
+{% extends 'master.html' %}
+{% block title %}Formulário de inscrição{% endblock title %}
+{% block content %}
+<h2 class="title"><a href="#">Formulário de Inscrição</a></h2>
+	<div class="entry">
+		<form action="." method="POST">
+		    {% csrf_token %}
+		    {{ form.as_p }}
+		    <input type="submit" value="Enviar">
+		</form>
+    </div>
+{% endblock content %}

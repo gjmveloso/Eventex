@@ -1,0 +1,15 @@
+{% extends 'master.html' %}
+{% block title %}Inscrição efetuada com sucesso{% endblock title %}
+{% block content %}
+<h2 class="title"><a href="#">Inscrição efetuada com sucesso</a></h2>
+	<div class="entry">
+		<p>Parabéns {{ subscription.name }}</p>
+        <p>Sua inscrição foi processada corretamente em {{subscription.created_at|date:"d/M/Y" }}.</p>
+        <p>Em breve alguém entrará em contato pelo 
+        {% if subscription.phone %}
+            telefone {{subscription.phone }}
+        {% else %}
+            e-mail {{ subscription.email }}
+        {% endif %}</p>
+    </div>
+{% endblock content %}
