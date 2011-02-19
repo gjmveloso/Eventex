@@ -34,7 +34,7 @@ def send_subscription_confirmation(subscription):
     send_mail(
         subject = u'EventeX - Confirmação de inscrição',
         message = u'{0}, obrigado por se inscrever no EventeX!'.format(subscription.name),
-        from_email = "not-reply@eventex.com.br",
+        from_email = "no-reply@eventex.com.br",
         recipient_list = [subscription.email],
     )
 
