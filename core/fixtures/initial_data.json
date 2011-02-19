@@ -1,0 +1,20 @@
+[
+    {
+        "pk": 1, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "gustavo", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": true, 
+            "is_staff": true, 
+            "last_login": "2011-02-19 00:44:48", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$c12f8$88f0815eff702465caa87aef7f05be7de2af8b42", 
+            "email": "gjmveloso@gmail.com", 
+            "date_joined": "2011-02-07 17:10:08"
+        }
+    }
+]
