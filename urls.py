@@ -7,7 +7,7 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('', 
-    (r'^$', homepage),
+    url(r'^$', homepage, name="home"),
     (r'^media/(?P<path>.*)$', 'django.views.static.serve', { 'document_root': settings.MEDIA_ROOT }),
     (r'^inscricao/', include('subscription.urls', namespace='subscription')), 
     # Example:

@@ -1,5 +1,6 @@
 # Django settings for eventex project.
 
+ON_HERIKE = False
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -7,7 +8,11 @@ import os
 
 PROJECT_DIR = os.path.dirname(__file__)
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+if ON_HERIKE:
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+else:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    
 EMAIL_HOST = 'localhost'
 EMAIL_HOST_PASSWORD = ''
 EMAIL_HOST_USER = ''
@@ -105,6 +110,7 @@ INSTALLED_APPS = (
     'subscription',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
+    'south',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
