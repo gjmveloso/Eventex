@@ -1,6 +1,6 @@
 # Django settings for eventex project.
 
-ON_HERIKE = False
+ON_HERIKE = True
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
