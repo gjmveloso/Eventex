@@ -1,0 +1,11 @@
+[
+    {
+        "pk": 1, 
+        "model": "south.migrationhistory", 
+        "fields": {
+            "applied": "2011-02-21 00:09:36", 
+            "app_name": "subscription", 
+            "migration": "0001_initial"
+        }
+    }
+]
