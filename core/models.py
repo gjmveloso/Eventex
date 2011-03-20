@@ -11,7 +11,6 @@ class Speaker(models.Model):
     
     class Meta:
         verbose_name = 'Palestrante'
-        verbose_name_plural = 'Palestrantes'
     
     def __unicode__(self):
         return self.name
@@ -67,7 +66,6 @@ class Talk(models.Model):
     
     class Meta:
         verbose_name = 'Palestra'
-        verbose_name_plural = 'Palestras'
     
     def __unicode__(self):
         return unicode(self.title)
@@ -78,7 +76,6 @@ class Course(Talk):
     
     class Meta:
         verbose_name = 'Curso'
-        verbose_name = 'Cursos'
     
         
     
