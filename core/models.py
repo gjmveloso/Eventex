@@ -44,16 +44,17 @@ class Contact(models.Model):
         verbose_name_plural = 'Contatos'
     
 class PeriodManager(models.Manager):
-    midday = datetime.time(12)
     
+    midday = datetime.time(12)
+       
     def at_morning(self):
-        qs = self.filter(start_time__lt=self.midday)
-        qs = self.order_by('start_time')
+        qs = self.filter(start_time__lt = self.midday)
+        qs = qs.order_by('start_time')
         return qs
         
     def at_afternoon(self):
-        qs = self.filter(start_time__gt=self.midday)
-        qs = self.order_by('start_time')
+        qs = self.filter(start_time__gte = self.midday)
+        qs = qs.order_by('start_time')
         return qs
 
 class Talk(models.Model):
@@ -63,7 +64,7 @@ class Talk(models.Model):
     speakers = models.ManyToManyField('Speaker', verbose_name=_('palestrante'))
     
     objects = PeriodManager()
-    
+           
     class Meta:
         verbose_name = 'Palestra'
     
@@ -74,9 +75,8 @@ class Course(Talk):
     slots = models.IntegerField()
     notes = models.TextField()
     
+    objects = PeriodManager()
+        
     class Meta:
         verbose_name = 'Curso'
-    
-        
-    
-    
+
