@@ -1,0 +1,17 @@
+{% extends 'master.html' %}
+    {% block content %}
+        <h3>Manhã</h3>
+        {% for talk in morning_talks %}
+            {% include 'core/talks_snippet.html' %}
+        {% empty %}
+            <p>Não existem palestras durante a manhã.</p>
+        {% endfor %}
+        <hr style="display: block"/>
+        <h3>Tarde</h3>
+        {% for talk in afternoon_talks %}
+            {% include 'core/talks_snippet.html' %}
+        {% empty %}
+            <p>Não existem palestras durante a tarde.</p>
+        {% endfor %}
+{% endblock content %}
+

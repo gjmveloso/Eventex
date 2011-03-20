@@ -19,3 +19,7 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     (r'^admin/', include(admin.site.urls)),
 )
+
+urlpatterns += patterns('core.views',
+    url(r'^palestrante/([-\w]+)/$', 'speaker', name='speaker'),
+    url(r'^palestras/$', 'talks', name='talks'),)
